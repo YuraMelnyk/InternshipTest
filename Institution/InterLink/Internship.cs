@@ -2,7 +2,7 @@ namespace InternshipTest.Institution.InterLink
 {
     public class Internship
     {
-        public srting name { get; set; } 
+        public string name { get; set; } 
         public Internship(string name)
         {
             //TODO: Implementation is needed     
@@ -12,10 +12,10 @@ namespace InternshipTest.Institution.InterLink
         public string GetStudents( University university)
         {
             //TODO: Implementation is needed
-            StringBuilder res = new StringBuilder();
+            string res = "";
             foreach (var student in university.students)
             {
-                if (studentKnowledge.level > university.AverageKnowledgel())
+                if (student.studentKnowledge.level > university.AverageKnowledgel())
                 {
                     res += student.name + "\n";
                 }

@@ -11,7 +11,7 @@ namespace InternshipTest.Institution
             this.name = name;
         }
         
-        public List<Student> students = new List<Student>();
+        public System.Collections.Generic.List<Student> students = new System.Collections.Generic.List<Student>();
 
         public void AddStudent(Student student)
         {
@@ -22,11 +22,13 @@ namespace InternshipTest.Institution
         public int AverageKnowledgel()
         {
             int sum = 0;
+            int res;
             foreach (var student in students)
             {
                 sum += student.studentKnowledge.level;
             }
-            return int.Parse(sum / students.lenght); //TODO: parese
+            res = sum / students.lenght;
+            return res;
         }
     }
 }

@@ -2,25 +2,27 @@ namespace InternshipTest
 {
     public class Knowledge
     {
-        public int mark
-        {
-            get { return mark; }
-            set
-            {
-                if (value > 0 && value < 100)
-                {
-                    throw new OutOfRangeException(string.Format("{0} isn't correct input. "));
-                }
-                else
-                {
-                    mark = value;
-                }
-            }
-        } //TODO: set
+        public int mark;
+        //public int mark
+        //{
+        //    get { return mark; }
+        //    set
+        //    {
+        //        if (value < 0 || value > 100)
+        //        {
+        //            throw new System.Exception(string.Format("{0} isn't correct input. "));
+        //        }
+        //        else
+        //        {
+        //            mark = value;
+        //        }
+        //    }
+        //} //TODO: set
 
         public int level
         {
-            get
+            get { return mark; }
+            set
             {
                 if (mark <= 30)
                     level = 1;
