@@ -20,33 +20,29 @@ namespace InternshipTest
                 }
 
                 if (_mark <= 30)
-                    level = 1;
+                    _level = 1;
                 else if (_mark > 30 && _mark <= 50)
                 {
-                    level = 2;
+                    _level = 2;
                 }
                 else if (_mark > 50 && _mark <= 70)
                 {
-                    level = 3;
+                    _level = 3;
                 }
                 else if (_mark > 70 && _mark <= 80)
                 {
-                    level = 4;
+                    _level = 4;
                 }
                 else
                 {
-                    level = 5;
+                    _level = 5;
                 }
             }
         } 
 
         public int level
         {
-            get { return _level; }
-            set
-            {
-                _level = value;
-            }
+            get { return _level; }        
         }
         public Knowledge(int mark)
         {
