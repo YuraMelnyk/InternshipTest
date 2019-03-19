@@ -4,7 +4,12 @@ namespace InternshipTest.Institution
 {
     public class University
     {
-        public string name { get; set; }
+        private string _name;
+        public string name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
 
         public University(string name)
         {

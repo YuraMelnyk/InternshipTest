@@ -2,7 +2,12 @@ namespace InternshipTest.Person
 {
     public class Student
     {
-        public string name { get; set; }
+        private string _name;
+        public string name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
         public Student(string name, Knowledge studentKnowledge)
         {
             //TODO: Implementation is needed

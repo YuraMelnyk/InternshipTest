@@ -2,39 +2,34 @@ namespace InternshipTest
 {
     public class Knowledge
     {
-        public int mark;
-        //public int mark
-        //{
-        //    get { return mark; }
-        //    set
-        //    {
-        //        if (value < 0 || value > 100)
-        //        {
-        //            throw new System.Exception(string.Format("{0} isn't correct input. "));
-        //        }
-        //        else
-        //        {
-        //            mark = value;
-        //        }
-        //    }
-        //} //TODO: set
+        private int _mark;
+        private int _level;
 
-        public int level
+        public int mark
         {
-            get { return mark; }
+            get { return _mark; }
             set
             {
-                if (mark <= 30)
+                if (value < 0 || value > 100)
+                {
+                    throw new System.Exception("{0} isn't correct input. ");
+                }
+                else
+                {
+                    _mark = value;
+                }
+
+                if (_mark <= 30)
                     level = 1;
-                else if (mark > 30 && mark <= 50)
+                else if (_mark > 30 && _mark <= 50)
                 {
                     level = 2;
                 }
-                else if (mark > 50 && mark <= 70)
+                else if (_mark > 50 && _mark <= 70)
                 {
                     level = 3;
                 }
-                else if (mark > 70 && mark <= 80)
+                else if (_mark > 70 && _mark <= 80)
                 {
                     level = 4;
                 }
@@ -42,6 +37,15 @@ namespace InternshipTest
                 {
                     level = 5;
                 }
+            }
+        } 
+
+        public int level
+        {
+            get { return _level; }
+            set
+            {
+                _level = value;
             }
         }
         public Knowledge(int mark)
