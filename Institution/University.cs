@@ -36,7 +36,7 @@ namespace InternshipTest.Institution
             {
                 sum += student.studentKnowledge.level;
             }
-            res = sum / students.lenght;
+            res = sum / students.Count;
             return res;
         }
     }

@@ -17,11 +17,12 @@ namespace InternshipTest.Institution.InterLink
         }
 
         private List<Student> bestStudents = new List<Student>();
+        public List<Student> candidates = new List<Student>();
 
-        public void GetStudents( University university)
+        public void GetStudents( University university, List<Student> Candidates)
         {
             
-            foreach (var student in university.students)
+            foreach (var student in Candidates)
             {
                 if (student.studentKnowledge.level > university.averageKnowledge)
                 {
@@ -38,6 +39,11 @@ namespace InternshipTest.Institution.InterLink
                 res += student.name;
             }
             return res;
+        }
+
+        public void GetCandidatesFrom()
+        {
+
         }
     }
 }

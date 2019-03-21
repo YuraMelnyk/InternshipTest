@@ -16,11 +16,14 @@ namespace InternshipTest
             university.AddStudent(new Student("Julia Veselkina", new Knowledge(70)));
             university.AddStudent(new Student("Maria Perechrest", new Knowledge(60)));
             s.SetKnowledge(new Knowledge(80));
-            university.AddStudent(s);
+
 
             Internship internship = new Internship("Interlink");
+            internship.candidates = university.students;
+            internship.candidates.Add(s);
+            internship.GetStudents(university, internship.candidates);
             Console.WriteLine("List of internship's students:");
-            Console.WriteLine(internship.GetStudents(university));
+            Console.WriteLine(internship.ShowBestStudents());
             Console.ReadLine();
         }
     }
