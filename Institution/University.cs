@@ -11,6 +11,10 @@ namespace InternshipTest.Institution
             get { return _name; }
             set { _name = value; }
         }
+        public int averageKnowledge
+        {
+            get { return AverageKnowledge(); }
+        }
 
         public University(string name)
         {
@@ -24,7 +28,7 @@ namespace InternshipTest.Institution
             students.Add(student);
         }
         
-        public int AverageKnowledgel()
+        private int AverageKnowledge()
         {
             int sum = 0;
             int res;
