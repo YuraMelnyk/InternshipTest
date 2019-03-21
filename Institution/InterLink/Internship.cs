@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
+using InternshipTest.Person;
 
 namespace InternshipTest.Institution.InterLink
 {
@@ -38,7 +39,7 @@ namespace InternshipTest.Institution.InterLink
             string res = "";
             foreach (var student in bestStudents)
             {
-                res += student.name;
+                res += student.name + "\n";
             }
             return res;
         }

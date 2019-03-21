@@ -8,6 +8,7 @@ namespace InternshipTest.Person
             get { return _name; }
             set { _name = value; }
         }
+        public Student() { }
         public Student(string name, Knowledge studentKnowledge)
         {
             this.name = name;
