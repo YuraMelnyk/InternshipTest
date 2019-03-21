@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace InternshipTest.Institution.InterLink
 {
@@ -41,9 +43,18 @@ namespace InternshipTest.Institution.InterLink
             return res;
         }
 
-        public void GetCandidatesFrom()
+        public void GetCandidatesFrom(FileStream fs)
         {
+            XmlSerializer formatter = new XmlSerializer(typeof(Student[]));
+            using (fs)
+            {
+                Student[] newStudents = (Student[])formatter.Deserialize(fs);
 
+                foreach (Student p in newStudents)
+                {
+                    candidates.Add(p);
+                }
+            }
         }
     }
 }
