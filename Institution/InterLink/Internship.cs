@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace InternshipTest.Institution.InterLink
 {
     public class Internship
@@ -14,15 +16,26 @@ namespace InternshipTest.Institution.InterLink
             this.name = name;
         }
 
-        public string GetStudents( University university)
+        private List<Student> bestStudents = new List<Student>();
+
+        public void GetStudents( University university)
         {
-            string res = "";
+            
             foreach (var student in university.students)
             {
-                if (student.studentKnowledge.level > university.AverageKnowledgel())
+                if (student.studentKnowledge.level > university.averageKnowledge)
                 {
-                    res += student.name + "\n";
+                    bestStudents.Add(student);
                 }
+            }            
+        }
+
+        public string ShowBestStudents()
+        {
+            string res = "";
+            foreach (var student in bestStudents)
+            {
+                res += student.name;
             }
             return res;
         }
