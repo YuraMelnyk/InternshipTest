@@ -10,14 +10,12 @@ namespace InternshipTest.Institution.InterLink
         }
 
         public Internship(string name)
-        {
-            //TODO: Implementation is needed     
+        {   
             this.name = name;
         }
 
         public string GetStudents( University university)
         {
-            //TODO: Implementation is needed
             string res = "";
             foreach (var student in university.students)
             {

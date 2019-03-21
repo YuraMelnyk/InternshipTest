@@ -1,4 +1,5 @@
 using InternshipTest.Person;
+using System.Collections.Generic;
 
 namespace InternshipTest.Institution
 {
@@ -16,11 +17,10 @@ namespace InternshipTest.Institution
             this.name = name;
         }
         
-        public System.Collections.Generic.List<Student> students = new System.Collections.Generic.List<Student>();
+        public List<Student> students = new List<Student>();
 
         public void AddStudent(Student student)
-        {
-            //TODO: Implementation is needed
+        {            
             students.Add(student);
         }
         

@@ -10,7 +10,6 @@ namespace InternshipTest.Person
         }
         public Student(string name, Knowledge studentKnowledge)
         {
-            //TODO: Implementation is needed
             this.name = name;
             this.studentKnowledge = studentKnowledge;
         }
@@ -21,7 +20,6 @@ namespace InternshipTest.Person
         public Knowledge studentKnowledge;
         public void SetKnowledge(Knowledge knowledge)
         {
-            //TODO: Implementation is needed
             try
             {
                 studentKnowledge = knowledge;

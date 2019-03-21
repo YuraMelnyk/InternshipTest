@@ -46,7 +46,6 @@ namespace InternshipTest
         }
         public Knowledge(int mark)
         {
-            //TODO: Implementation is needed
             this.mark = mark;
         }
     }
