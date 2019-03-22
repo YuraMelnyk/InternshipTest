@@ -8,6 +8,10 @@ namespace InternshipTest.Institution.InterLink
     public class Internship
     {
         private string _name;
+        private List<Student> bestStudents = new List<Student>();
+
+        public List<Student> candidates = new List<Student>();
+
         public string name
         {
             get { return _name; }
@@ -18,9 +22,6 @@ namespace InternshipTest.Institution.InterLink
         {   
             this.name = name;
         }
-
-        private List<Student> bestStudents = new List<Student>();
-        public List<Student> candidates = new List<Student>();
 
         public void GetStudents( University university, List<Student> Candidates)
         {

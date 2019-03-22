@@ -5,8 +5,6 @@ namespace InternshipTest
         private int _mark;
         private int _level;
 
-        public Knowledge() { }
-
         public int mark
         {
             get { return _mark; }
@@ -46,6 +44,9 @@ namespace InternshipTest
         {
             get { return _level; }        
         }
+
+        public Knowledge() { }
+
         public Knowledge(int mark)
         {
             this.mark = mark;
