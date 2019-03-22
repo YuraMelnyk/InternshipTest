@@ -32,12 +32,20 @@ namespace InternshipTest.Institution
         {
             int sum = 0;
             int res;
-            foreach (var student in students)
+            if (students.Count != 0)
             {
-                sum += student.studentKnowledge.level;
+                foreach (var student in students)
+                {
+                    sum += student.studentKnowledge.level;
+                }
+                res = sum / students.Count;
+                return res;
             }
-            res = sum / students.Count;
-            return res;
+            else
+            {
+                return 0;
+            }
+            
         }
     }
 }
